@@ -1,0 +1,5 @@
+C:\Users\Eddie Rangel\Source\BuenaHealth.Web.API\BuenaHealth.Web.API.Tests\bin\Debug\BuenaHealth.Web.API.Tests.dll
+C:\Users\Eddie Rangel\Source\BuenaHealth.Web.API\BuenaHealth.Web.API.Tests\bin\Debug\BuenaHealth.Web.API.Tests.pdb
+C:\Users\Eddie Rangel\Source\BuenaHealth.Web.API\BuenaHealth.Web.API.Tests\obj\Debug\BuenaHealth.Web.API.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Eddie Rangel\Source\BuenaHealth.Web.API\BuenaHealth.Web.API.Tests\obj\Debug\BuenaHealth.Web.API.Tests.dll
+C:\Users\Eddie Rangel\Source\BuenaHealth.Web.API\BuenaHealth.Web.API.Tests\obj\Debug\BuenaHealth.Web.API.Tests.pdb
