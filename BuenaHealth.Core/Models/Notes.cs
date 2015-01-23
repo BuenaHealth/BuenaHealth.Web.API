@@ -8,6 +8,7 @@ namespace BuenaHealth.Core.Models
 {
     public class Notes
     {
+        public int NoteId { get; set; }
         public string Summmary { get; set; }
     }
 }

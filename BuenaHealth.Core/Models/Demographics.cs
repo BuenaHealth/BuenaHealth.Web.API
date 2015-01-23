@@ -8,6 +8,7 @@ namespace BuenaHealth.Core.Models
 {
     public class Demographics
     {
+        public int DemographicId { get; set; }
         public string Language { get; set; }
         public string Sex { get; set; }
         public string Race { get; set; }
