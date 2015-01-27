@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Web.API", "BuenaHealth.Web.API\BuenaHealth.Web.API.csproj", "{4CBFA017-DB75-47B8-A7C9-6FE1DB3C6C84}"
 EndProject
@@ -15,6 +15,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Core", "BuenaHealth.Core\BuenaHealth.Core.csproj", "{BA516234-80A0-4F10-AB5C-81A282261465}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Infrastructure", "BuenaHealth.Infrastructure\BuenaHealth.Infrastructure.csproj", "{E0C078D7-4F1C-40C5-BFA7-EFBDF98A849C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHelath.ApplicationServices", "BuenaHelath.ApplicationServices\BuenaHelath.ApplicationServices.csproj", "{B9B43CF6-23CF-4949-ABB1-5B4174BB7768}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{E0C078D7-4F1C-40C5-BFA7-EFBDF98A849C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0C078D7-4F1C-40C5-BFA7-EFBDF98A849C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0C078D7-4F1C-40C5-BFA7-EFBDF98A849C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9B43CF6-23CF-4949-ABB1-5B4174BB7768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B43CF6-23CF-4949-ABB1-5B4174BB7768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B43CF6-23CF-4949-ABB1-5B4174BB7768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B43CF6-23CF-4949-ABB1-5B4174BB7768}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
