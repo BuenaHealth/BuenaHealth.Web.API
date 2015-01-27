@@ -9,8 +9,9 @@ namespace BuenaHealth.Core.Services
 {
     public interface IRepository<T> where T : class
     {
-        IQueryable<T> GetAll();
-        IQueryable<T> Find(Expression<Func<T, bool>> predicate);
+        IQueryable<T> AsQueryable();
+        IEnumerable<T> GetAll();
+        IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
         T Single(Expression<Func<T, bool>> predicate);
         T SingleOrDefault(Expression<Func<T, bool>> predicate);
         T First(Expression<Func<T, bool>> predicate);
@@ -20,6 +21,5 @@ namespace BuenaHealth.Core.Services
         void Delete(T entity);
         void Attach(T entity);
         void Update(T entity);
-        void AddRange(IEnumerable<T> entities);
     }
 }
