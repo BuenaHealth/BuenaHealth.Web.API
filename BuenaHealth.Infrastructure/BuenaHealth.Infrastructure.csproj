@@ -50,6 +50,7 @@
     <Compile Include="Data\BuenaHealthRepository.cs" />
     <Compile Include="Data\BuenaHealthUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stubs\InMemoryRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BuenaHealth.Core\BuenaHealth.Core.csproj">
