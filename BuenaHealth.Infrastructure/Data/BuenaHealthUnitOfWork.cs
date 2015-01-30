@@ -11,59 +11,59 @@ namespace BuenaHealth.Infrastructure.Data
 {
     public class BuenaHealthUnitOfWork : DbContext, IUnitOfWork
     {
-        private BuenaHealthRepository<Demographics> _demographicsRepository;
-        private BuenaHealthRepository<Humans> _humansRepository;
-        private BuenaHealthRepository<Notes> _notesRepository;
-        private BuenaHealthRepository<VitalSigns> _vitalSignsRepository;
+        private BuenaHealthRepository<Demographic> _demographicsRepository;
+        private BuenaHealthRepository<Human> _humansRepository;
+        private BuenaHealthRepository<Note> _notesRepository;
+        private BuenaHealthRepository<VitalSign> _vitalSignsRepository;
 
-        public DbSet<Demographics> Demographics { get; set; }
-        public DbSet<Humans> Humans { get; set; }
-        public DbSet<Notes> Notes { get; set; }
-        public DbSet<VitalSigns> VitalSigns { get; set; }
+        public DbSet<Demographic> Demographics { get; set; }
+        public DbSet<Human> Humans { get; set; }
+        public DbSet<Note> Notes { get; set; }
+        public DbSet<VitalSign> VitalSigns { get; set; }
 
-        public IRepository<Demographics> DemographicsRepository 
+        public IRepository<Demographic> DemographicsRepository 
         {
             get
             {
                 if (_demographicsRepository == null)
                 {
-                    _demographicsRepository = new BuenaHealthRepository<Demographics>(this,Demographics);
+                    _demographicsRepository = new BuenaHealthRepository<Demographic>(this,Demographics);
                 }
                 return _demographicsRepository;
             }
         }
 
-        public IRepository<Notes> NotesRepository
+        public IRepository<Note> NotesRepository
         {
             get
             {
                 if (_notesRepository == null)
                 {
-                    _notesRepository = new BuenaHealthRepository<Notes>(this, Notes);
+                    _notesRepository = new BuenaHealthRepository<Note>(this, Notes);
                 }
                 return _notesRepository;
             }
         }
 
-        public IRepository<VitalSigns> VitalSignsRepository
+        public IRepository<VitalSign> VitalSignsRepository
         {
             get
             {
                 if (_vitalSignsRepository == null)
                 {
-                    _vitalSignsRepository = new BuenaHealthRepository<VitalSigns>(this, VitalSigns);
+                    _vitalSignsRepository = new BuenaHealthRepository<VitalSign>(this, VitalSigns);
                 }
                 return _vitalSignsRepository;
             }
         }
 
-        public IRepository<Humans> HumansRepository
+        public IRepository<Human> HumansRepository
         {
             get
             {
                 if (_humansRepository == null)
                 {
-                    _humansRepository = new BuenaHealthRepository<Humans>(this, Humans);
+                    _humansRepository = new BuenaHealthRepository<Human>(this, Humans);
                 }
                 return _humansRepository;
             }

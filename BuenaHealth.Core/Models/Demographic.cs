@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuenaHealth.Core.Models
 {
-    public class Demographics
+    public class Demographic
     {
         public int DemographicId { get; set; }
         public string Language { get; set; }

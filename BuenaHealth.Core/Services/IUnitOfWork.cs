@@ -9,9 +9,9 @@ namespace BuenaHealth.Core.Services
 {
     public interface IUnitOfWork
     {
-        IRepository<Demographics> DemographicsRepository { get; }
-        IRepository<Notes> NotesRepository { get; }
-        IRepository<VitalSigns> VitalSignsRepository { get; }
+        IRepository<Demographic> DemographicsRepository { get; }
+        IRepository<Note> NotesRepository { get; }
+        IRepository<VitalSign> VitalSignsRepository { get; }
         void Commit();
     }
 }

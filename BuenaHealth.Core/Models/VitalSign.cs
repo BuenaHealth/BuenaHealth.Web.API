@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuenaHealth.Core.Models
 {
-    public class VitalSigns
+    public class VitalSign
     {
         public int VitalSignId { get; set; }
         public float Height { get; set; }
