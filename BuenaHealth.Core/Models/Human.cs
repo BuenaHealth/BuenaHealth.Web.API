@@ -12,5 +12,8 @@ namespace BuenaHealth.Core.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
+        public Demographic Demographic { get; set; }
+        public ICollection<VitalSign> VitalSigns { get; set; }
+        public ICollection<Note> Notes { get; set; }
     }
 }
