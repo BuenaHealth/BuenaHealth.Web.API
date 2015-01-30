@@ -9,13 +9,13 @@ using BuenaHealth.Core.Services;
 
 namespace BuenaHealth.Infrastructure.Data
 {
-    public class EFBuenaHealthRepository<T> : IRepository<T> where T : class
+    public class BuenaHealthRepository<T> : IRepository<T> where T : class
     {
         
         private readonly DbSet<T> _dbSet;
         private readonly DbContext _dbContext;
 
-        public EFBuenaHealthRepository(DbContext dbContext, DbSet<T> dbSet)
+        public BuenaHealthRepository(DbContext dbContext, DbSet<T> dbSet)
         {
             _dbContext = dbContext;
             _dbSet = dbSet;

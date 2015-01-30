@@ -48,8 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Data\EFBuenaHealthRepository.cs" />
-    <Compile Include="Data\EFBuenaHealthUnitOfWork.cs" />
+    <Compile Include="Data\BuenaHealthRepository.cs" />
+    <Compile Include="Data\BuenaHealthUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

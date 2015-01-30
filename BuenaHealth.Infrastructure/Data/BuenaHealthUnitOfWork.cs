@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuenaHealth.Infrastructure.Data
 {
-    class EFBuenaHealthUnitOfWork
+    class BuenaHealthUnitOfWork
     {
     }
 }
