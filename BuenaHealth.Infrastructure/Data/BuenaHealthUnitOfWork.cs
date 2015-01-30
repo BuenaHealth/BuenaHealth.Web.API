@@ -11,25 +11,33 @@ namespace BuenaHealth.Infrastructure.Data
 {
     public class BuenaHealthUnitOfWork : DbContext, IUnitOfWork
     {
-        private BuenaHealthRepository<Demographic> _demographicsRepository;
-        private BuenaHealthRepository<Human> _humansRepository;
-        private BuenaHealthRepository<Note> _notesRepository;
-        private BuenaHealthRepository<VitalSign> _vitalSignsRepository;
+        private BuenaHealthRepository<Demographic> _demographicRepository;
+        private BuenaHealthRepository<Human> _humanRepository;
+        private BuenaHealthRepository<Note> _noteRepository;
+        private BuenaHealthRepository<VitalSign> _vitalSignRepository;
 
         public DbSet<Demographic> Demographics { get; set; }
         public DbSet<Human> Humans { get; set; }
         public DbSet<Note> Notes { get; set; }
         public DbSet<VitalSign> VitalSigns { get; set; }
 
+        public BuenaHealthUnitOfWork()
+        {
+            _demographicRepository = null;
+            _humanRepository = null;
+            _noteRepository = null;
+            _vitalSignRepository = null;
+        }
+
         public IRepository<Demographic> DemographicsRepository 
         {
             get
             {
-                if (_demographicsRepository == null)
+                if (_demographicRepository == null)
                 {
-                    _demographicsRepository = new BuenaHealthRepository<Demographic>(this,Demographics);
+                    _demographicRepository = new BuenaHealthRepository<Demographic>(this,Demographics);
                 }
-                return _demographicsRepository;
+                return _demographicRepository;
             }
         }
 
@@ -37,11 +45,11 @@ namespace BuenaHealth.Infrastructure.Data
         {
             get
             {
-                if (_notesRepository == null)
+                if (_noteRepository == null)
                 {
-                    _notesRepository = new BuenaHealthRepository<Note>(this, Notes);
+                    _noteRepository = new BuenaHealthRepository<Note>(this, Notes);
                 }
-                return _notesRepository;
+                return _noteRepository;
             }
         }
 
@@ -49,11 +57,11 @@ namespace BuenaHealth.Infrastructure.Data
         {
             get
             {
-                if (_vitalSignsRepository == null)
+                if (_vitalSignRepository == null)
                 {
-                    _vitalSignsRepository = new BuenaHealthRepository<VitalSign>(this, VitalSigns);
+                    _vitalSignRepository = new BuenaHealthRepository<VitalSign>(this, VitalSigns);
                 }
-                return _vitalSignsRepository;
+                return _vitalSignRepository;
             }
         }
 
@@ -61,11 +69,11 @@ namespace BuenaHealth.Infrastructure.Data
         {
             get
             {
-                if (_humansRepository == null)
+                if (_humanRepository == null)
                 {
-                    _humansRepository = new BuenaHealthRepository<Human>(this, Humans);
+                    _humanRepository = new BuenaHealthRepository<Human>(this, Humans);
                 }
-                return _humansRepository;
+                return _humanRepository;
             }
         }
 
