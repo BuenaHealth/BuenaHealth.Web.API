@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Data\BuenaHealthRepository.cs" />
     <Compile Include="Data\BuenaHealthUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
