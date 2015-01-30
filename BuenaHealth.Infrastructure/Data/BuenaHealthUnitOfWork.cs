@@ -65,18 +65,19 @@ namespace BuenaHealth.Infrastructure.Data
             }
         }
 
-        public IRepository<Human> HumansRepository
+        public IRepository<Human> HumanRepository
         {
             get
             {
                 if (_humanRepository == null)
                 {
-                    _humanRepository = new BuenaHealthRepository<Human>(this, Humans);
+                    _humanRepository = new BuenaHealthRepository<Human>(this,Humans);
                 }
                 return _humanRepository;
             }
         }
 
+        
         public void Commit()
         {
             this.SaveChanges();

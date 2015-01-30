@@ -12,6 +12,7 @@ namespace BuenaHealth.Core.Services
         IRepository<Demographic> DemographicsRepository { get; }
         IRepository<Note> NotesRepository { get; }
         IRepository<VitalSign> VitalSignsRepository { get; }
+        IRepository<Human> HumanRepository { get; }
         void Commit();
     }
 }
