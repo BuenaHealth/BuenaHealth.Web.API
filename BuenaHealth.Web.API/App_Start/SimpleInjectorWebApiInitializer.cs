@@ -1,3 +1,6 @@
+using System;
+using System.Configuration;
+
 [assembly: WebActivator.PostApplicationStartMethod(typeof(BuenaHealth.Web.API.App_Start.SimpleInjectorWebApiInitializer), "Initialize")]
 
 namespace BuenaHealth.Web.API.App_Start
@@ -5,6 +8,11 @@ namespace BuenaHealth.Web.API.App_Start
     using System.Web.Http;
     using SimpleInjector;
     using SimpleInjector.Integration.WebApi;
+    using BuenaHealth.Core.Services;
+    using BuenaHealth.ApplicationServices;
+    using BuenaHealth.Infrastructure.Data;
+    using BuenaHealth.Infrastructure.Stubs;
+
     
     public static class SimpleInjectorWebApiInitializer
     {
@@ -30,6 +38,17 @@ namespace BuenaHealth.Web.API.App_Start
 
             // For instance:
             // container.RegisterWebApiRequest<IUserRepository, SqlUserRepository>();
+            // Register your types, for instance:
+            if (Convert.ToBoolean(ConfigurationManager.AppSettings["Connected"].ToString()))
+            {
+                //SQL
+                container.RegisterWebApiRequest<IUnitOfWork, BuenaHealthUnitOfWork>();
+            }
+            else
+            {
+                //Mock
+                container.RegisterWebApiRequest<IUnitOfWork, InMemoryUnitOfWork>();
+            }
         }
     }
 }
