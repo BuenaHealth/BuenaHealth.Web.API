@@ -39,7 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Entities\Demographic.cs" />
+    <Compile Include="Entities\Ethnicity.cs" />
+    <Compile Include="Entities\Note.cs" />
+    <Compile Include="Entities\Profile.cs" />
+    <Compile Include="Entities\Race.cs" />
+    <Compile Include="Entities\Status.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\VitalSign.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
