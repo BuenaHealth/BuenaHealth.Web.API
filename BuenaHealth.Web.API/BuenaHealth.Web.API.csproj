@@ -356,10 +356,6 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BuenaHealth.ApplicationServices\BuenaHealth.ApplicationServices.csproj">
-      <Project>{362b8f97-4325-443d-bfc7-074b918a4eb5}</Project>
-      <Name>BuenaHealth.ApplicationServices</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BuenaHealth.Core\BuenaHealth.Core.csproj">
       <Project>{ba516234-80a0-4f10-ab5c-81a282261465}</Project>
       <Name>BuenaHealth.Core</Name>
