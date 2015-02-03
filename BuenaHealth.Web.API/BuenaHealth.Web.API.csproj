@@ -355,16 +355,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BuenaHealth.Core\BuenaHealth.Core.csproj">
-      <Project>{ba516234-80a0-4f10-ab5c-81a282261465}</Project>
-      <Name>BuenaHealth.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BuenaHealth.Infrastructure\BuenaHealth.Infrastructure.csproj">
-      <Project>{e0c078d7-4f1c-40c5-bfa7-efbdf98a849c}</Project>
-      <Name>BuenaHealth.Infrastructure</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
