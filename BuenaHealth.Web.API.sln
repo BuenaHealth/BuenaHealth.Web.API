@@ -18,6 +18,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Infrastructure"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.ApplicationServices", "BuenaHealth.ApplicationServices\BuenaHealth.ApplicationServices.csproj", "{362B8F97-4325-443D-BFC7-074B918A4EB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Common", "BuenaHealth.Common\BuenaHealth.Common.csproj", "{0A3E2439-B4D5-4AEF-9346-159C814247E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Data", "BuenaHealth.Data\BuenaHealth.Data.csproj", "{8CFC3BF7-AC8A-453D-987F-D0307433F756}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Data.SqlServer", "BuenaHealth.Data.Sqlserver\BuenaHealth.Data.SqlServer.csproj", "{421836E3-A2FE-48BC-BCC6-429D4C381FDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Web.API.Models", "BuenaHealth.Web.API.Models\BuenaHealth.Web.API.Models.csproj", "{38EF1E22-9457-4DC3-95C9-CF76B59FE9D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Web.Common", "BuenaHealth.Web.Common\BuenaHealth.Web.Common.csproj", "{11527FF9-3FB6-4DA3-9DE0-DFC117730BDE}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BuenaHealth.Database", "BuenaHealth.Database\BuenaHealth.Database.sqlproj", "{DBCA087D-45A5-4751-8F88-F22EF708C8DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +56,32 @@ Global
 		{362B8F97-4325-443D-BFC7-074B918A4EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{362B8F97-4325-443D-BFC7-074B918A4EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{362B8F97-4325-443D-BFC7-074B918A4EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3E2439-B4D5-4AEF-9346-159C814247E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3E2439-B4D5-4AEF-9346-159C814247E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3E2439-B4D5-4AEF-9346-159C814247E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3E2439-B4D5-4AEF-9346-159C814247E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CFC3BF7-AC8A-453D-987F-D0307433F756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CFC3BF7-AC8A-453D-987F-D0307433F756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CFC3BF7-AC8A-453D-987F-D0307433F756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CFC3BF7-AC8A-453D-987F-D0307433F756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{421836E3-A2FE-48BC-BCC6-429D4C381FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421836E3-A2FE-48BC-BCC6-429D4C381FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421836E3-A2FE-48BC-BCC6-429D4C381FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421836E3-A2FE-48BC-BCC6-429D4C381FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38EF1E22-9457-4DC3-95C9-CF76B59FE9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38EF1E22-9457-4DC3-95C9-CF76B59FE9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38EF1E22-9457-4DC3-95C9-CF76B59FE9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38EF1E22-9457-4DC3-95C9-CF76B59FE9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11527FF9-3FB6-4DA3-9DE0-DFC117730BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11527FF9-3FB6-4DA3-9DE0-DFC117730BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11527FF9-3FB6-4DA3-9DE0-DFC117730BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11527FF9-3FB6-4DA3-9DE0-DFC117730BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBCA087D-45A5-4751-8F88-F22EF708C8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBCA087D-45A5-4751-8F88-F22EF708C8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBCA087D-45A5-4751-8F88-F22EF708C8DB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DBCA087D-45A5-4751-8F88-F22EF708C8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBCA087D-45A5-4751-8F88-F22EF708C8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBCA087D-45A5-4751-8F88-F22EF708C8DB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
