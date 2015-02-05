@@ -63,10 +63,10 @@
   <ItemGroup>
     <None Include="Scripts\ReferenceData.sql" />
     <None Include="Scripts\TestData.sql" />
-    <None Include="Tables\Status.sql" />
-    <None Include="Tables\Profile.sql" />
-    <None Include="Tables\ProfileUser.sql" />
-    <None Include="Tables\User.sql" />
+    <Build Include="Tables\Status.sql" />
+    <Build Include="Tables\Profile.sql" />
+    <Build Include="Tables\ProfileUser.sql" />
+    <Build Include="Tables\User.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

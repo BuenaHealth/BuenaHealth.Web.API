@@ -5,7 +5,7 @@
 	[ts] rowversion not null,
 	primary key (ProfileId, UserId),
 	foreign key (UserId) references dbo.[User] (UserId),
-	foreign key (ProfileId) references dbo.Task (ProfileId) 
+	foreign key (ProfileId) references [dbo].[Profile] (ProfileId) 
 )
 go
 
