@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Entities\Demographic.cs" />
     <Compile Include="Entities\Ethnicity.cs" />
+    <Compile Include="Entities\Language.cs" />
     <Compile Include="Entities\Note.cs" />
     <Compile Include="Entities\Profile.cs" />
     <Compile Include="Entities\Race.cs" />

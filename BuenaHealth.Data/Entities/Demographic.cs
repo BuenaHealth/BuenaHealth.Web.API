@@ -9,7 +9,7 @@ namespace BuenaHealth.Data.Entities
     public class Demographic
     {
         public virtual int DemographicId { get; set; }
-        public virtual string Language { get; set; }
+        public virtual Language Language { get; set; }
         public virtual string Sex { get; set; }
         public virtual Race Race{ get; set; }
         public virtual Ethnicity Ethnicity { get; set; }
