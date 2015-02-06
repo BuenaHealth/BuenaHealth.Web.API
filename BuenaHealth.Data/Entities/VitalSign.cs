@@ -13,7 +13,6 @@ namespace BuenaHealth.Data.Entities
         public virtual float Weight { get; set; }
         public virtual int Systolic { get; set; }
         public virtual int Diastolic { get; set; }
-
         public virtual byte[] Version { get; set; }
     }
 }

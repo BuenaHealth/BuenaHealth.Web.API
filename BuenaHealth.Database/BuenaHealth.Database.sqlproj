@@ -68,6 +68,7 @@
     <Build Include="Tables\ProfileUser.sql" />
     <Build Include="Tables\User.sql" />
     <None Include="Tables\Demographic.sql" />
+    <None Include="Tables\Language.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
