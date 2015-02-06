@@ -67,11 +67,11 @@
     <Build Include="Tables\Profile.sql" />
     <Build Include="Tables\ProfileUser.sql" />
     <Build Include="Tables\User.sql" />
-    <None Include="Tables\Demographic.sql" />
-    <None Include="Tables\Language.sql" />
-    <None Include="Tables\Ethnicity.sql" />
-    <None Include="Tables\Race.sql" />
-    <None Include="Tables\Sex.sql" />
+    <Build Include="Tables\Demographic.sql" />
+    <Build Include="Tables\Language.sql" />
+    <Build Include="Tables\Ethnicity.sql" />
+    <Build Include="Tables\Race.sql" />
+    <Build Include="Tables\Sex.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
