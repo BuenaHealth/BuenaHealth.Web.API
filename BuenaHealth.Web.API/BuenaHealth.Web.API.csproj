@@ -358,6 +358,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BuenaHealth.Web.API.Models\BuenaHealth.Web.API.Models.csproj">
+      <Project>{38EF1E22-9457-4DC3-95C9-CF76B59FE9D8}</Project>
+      <Name>BuenaHealth.Web.API.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuenaHealth.Web.Common\BuenaHealth.Web.Common.csproj">
+      <Project>{11527FF9-3FB6-4DA3-9DE0-DFC117730BDE}</Project>
+      <Name>BuenaHealth.Web.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
