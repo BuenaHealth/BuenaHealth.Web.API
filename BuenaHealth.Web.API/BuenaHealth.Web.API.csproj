@@ -241,6 +241,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\NinjectConfigurator.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -359,6 +360,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BuenaHealth.Common\BuenaHealth.Common.csproj">
+      <Project>{0a3e2439-b4d5-4aef-9346-159c814247e9}</Project>
+      <Name>BuenaHealth.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BuenaHealth.Web.API.Models\BuenaHealth.Web.API.Models.csproj">
       <Project>{38EF1E22-9457-4DC3-95C9-CF76B59FE9D8}</Project>
       <Name>BuenaHealth.Web.API.Models</Name>
