@@ -75,7 +75,7 @@
     <Compile Include="NamespaceHttpControllerSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\ApiVersionConstraint.cs" />
-    <Compile Include="Routing\ApiVersionOneRoutePrefixAttribute.cs" />
+    <Compile Include="Routing\ApiVersion1RoutePrefixAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

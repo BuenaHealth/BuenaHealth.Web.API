@@ -9,7 +9,7 @@ using BuenaHealth.Web.Common.Routing;
 
 namespace BuenaHealth.Web.API.Controllers.V1
 {
-    [ApiVersionOneRoutePrefix("profiles")]
+    [ApiVersion1RoutePrefix("profiles")]
     public class ProfilesController : ApiController
     {
         [Route("",Name = "AddProfileRoute")]
