@@ -1,3 +1,6 @@
+using System.Web.Http;
+using BuenaHealth.Web.Common;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(BuenaHealth.Web.API.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(BuenaHealth.Web.API.App_Start.NinjectWebCommon), "Stop")]
 
@@ -22,7 +25,16 @@ namespace BuenaHealth.Web.API.App_Start
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            bootstrapper.Initialize(CreateKernel);
+
+            IKernel container = null;
+            bootstrapper.Initialize(() =>
+            {
+                container = CreateKernel();
+                return container;
+            });
+
+            var resolver = new NinjectDependencyResolver(container);
+            GlobalConfiguration.Configuration.DependencyResolver = resolver;
         }
         
         /// <summary>
@@ -61,6 +73,8 @@ namespace BuenaHealth.Web.API.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            var containerConfigurator = new NinjectConfigurator();
+            containerConfigurator.Configure(kernel);
         }        
     }
 }
