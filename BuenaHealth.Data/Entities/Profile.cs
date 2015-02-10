@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BuenaHealth.Data.Interfaces;
 
 namespace BuenaHealth.Data.Entities
 {
-    public class Profile
+    public class Profile : IVersionedEntity
     {
         private readonly IList<User> _users = new List<User>();
         public virtual long ProfileId { get; set; }
