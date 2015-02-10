@@ -39,10 +39,7 @@ namespace BuenaHealth.Web.Common.Routing
             {
                 return AllowedVersion.Equals(value.ToString().ToLowerInvariant());
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
     }
 }
