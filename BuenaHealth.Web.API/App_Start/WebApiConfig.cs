@@ -25,8 +25,8 @@ namespace BuenaHealth.Web.API
             // Web API routes
             config.MapHttpAttributeRoutes(contstraintResolver);
             config.Services.Replace(typeof(IHttpControllerSelector), new NamespaceHttpControllerSelector(config));
-        
-           
+            config.EnableSystemDiagnosticsTracing();
+
         }
     }
 }
