@@ -364,6 +364,14 @@
       <Project>{0a3e2439-b4d5-4aef-9346-159c814247e9}</Project>
       <Name>BuenaHealth.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BuenaHealth.Data.Sqlserver\BuenaHealth.Data.SqlServer.csproj">
+      <Project>{421836e3-a2fe-48bc-bcc6-429d4c381fdf}</Project>
+      <Name>BuenaHealth.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuenaHealth.Data\BuenaHealth.Data.csproj">
+      <Project>{8cfc3bf7-ac8a-453d-987f-d0307433f756}</Project>
+      <Name>BuenaHealth.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BuenaHealth.Web.API.Models\BuenaHealth.Web.API.Models.csproj">
       <Project>{38EF1E22-9457-4DC3-95C9-CF76B59FE9D8}</Project>
       <Name>BuenaHealth.Web.API.Models</Name>
