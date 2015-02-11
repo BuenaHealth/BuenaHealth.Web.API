@@ -72,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionTransactionHelper.cs" />
     <Compile Include="IActionTransactionHelper.cs" />
     <Compile Include="NamespaceHttpControllerSelector.cs" />
     <Compile Include="NinjectDependencyResolver.cs" />
