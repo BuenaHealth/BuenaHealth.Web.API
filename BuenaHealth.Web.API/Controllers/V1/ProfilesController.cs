@@ -5,11 +5,13 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using BuenaHealth.Web.API.Models;
+using BuenaHealth.Web.Common;
 using BuenaHealth.Web.Common.Routing;
 
 namespace BuenaHealth.Web.API.Controllers.V1
 {
     [ApiVersion1RoutePrefix("profiles")]
+    [UnitOfWorkActionFilter]
     public class ProfilesController : ApiController
     {
         [Route("",Name = "AddProfileRoute")]

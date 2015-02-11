@@ -47,7 +47,7 @@ namespace BuenaHealth.Web.API.App_Start
 
             container.Bind<ISessionFactory>().ToConstant(sessionFactory);
             container.Bind<ISession>().ToMethod(CreateSession).InRequestScope();
-            //container.Bind<IActionTransactionHelper>().To<ActionTransactionHelper>().InRequestScope();
+            container.Bind<IActionTransactionHelper>().To<ActionTransactionHelper>().InRequestScope();
 
         }
 
