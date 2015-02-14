@@ -11,8 +11,8 @@ namespace BuenaHealth.Web.API.Controllers.V1
     public class ProfilesController : ApiController
     {
         [Route("",Name = "AddProfileRoute")]
-        [HttpPost]
-        public Profile AddProfile(HttpRequestMessage requestMessage, Models.Profile newProfile)
+        [System.Web.Http.HttpPost]
+        public Profile AddProfile(HttpRequestMessage requestMessage, NewProfile newProfile)
         {
             return new Profile
             {

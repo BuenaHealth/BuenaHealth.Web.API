@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Web.Http;
 using BuenaHealth.Web.API.Models;
 
@@ -13,7 +9,7 @@ namespace BuenaHealth.Web.API.Controllers.V2
     {
         [Route("", Name = "AddProfileRouteV2")]
         [HttpPost]
-        public Profile AddProfile(HttpRequestMessage requestMessage, Models.Profile newProfile)
+        public Profile AddProfile(HttpRequestMessage requestMessage, NewProfileV2 newProfile)
         {
             return new Profile
             {
