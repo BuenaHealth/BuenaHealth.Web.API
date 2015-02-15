@@ -1,7 +1,9 @@
 ﻿using BuenaHealth.Common;
 using BuenaHealth.Common.Logging;
+using BuenaHealth.Common.Security;
 using BuenaHealth.Data.SqlServer.Mapping;
 using BuenaHealth.Web.Common;
+using BuenaHealth.Web.Common.Security;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using log4net.Config;
@@ -23,6 +25,7 @@ namespace BuenaHealth.Web.API.App_Start
         private void AddBindings(IKernel container)
         {
             ConfigureLog4Net(container);
+            ConfigureUserSession(container);
             ConfigureNHibernate(container);
             container.Bind<IDateTime>().To<DateTimeAdapter>().InSingletonScope();
         }
@@ -60,6 +63,13 @@ namespace BuenaHealth.Web.API.App_Start
                 CurrentSessionContext.Bind(session);
             }
             return sessionFactory.GetCurrentSession();
+        }
+
+        private void ConfigureUserSession(IKernel container)
+        {
+            var userSession = new UserSession();
+            container.Bind<IUserSession>().ToConstant(userSession).InSingletonScope();
+            container.Bind<IWebUserSession>().ToConstant(userSession).InSingletonScope();
         }
     }
 }

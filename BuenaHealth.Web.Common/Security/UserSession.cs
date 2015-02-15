@@ -33,7 +33,18 @@ namespace BuenaHealth.Web.Common.Security
 
         public string ApiVersionInUser
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                const int versionIndex = 2;
+                if (HttpContext.Current.Request.Url.Segments.Count() < versionIndex + 1)
+                {
+                    return string.Empty;
+                }
+
+                var apiVersionInUse = HttpContext.Current.Request.Url.Segments[versionIndex].Replace("/", String.Empty);
+                
+                return apiVersionInUse;
+            }
         }
 
         public Uri ReqeustUri
