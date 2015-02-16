@@ -1,6 +1,7 @@
 ﻿using BuenaHealth.Common;
 using BuenaHealth.Common.Logging;
 using BuenaHealth.Common.Security;
+using BuenaHealth.Common.TypeMapping;
 using BuenaHealth.Data.QueryProcessors;
 using BuenaHealth.Data.SqlServer.Mapping;
 using BuenaHealth.Data.SqlServer.QueryProcessors;
@@ -29,6 +30,7 @@ namespace BuenaHealth.Web.API.App_Start
             ConfigureLog4Net(container);
             ConfigureUserSession(container);
             ConfigureNHibernate(container);
+            ConfigureAutoMapper(container);
             container.Bind<IDateTime>().To<DateTimeAdapter>().InSingletonScope();
             container.Bind<IAddProfileQueryProcessor>().To<AddProfileQueryProcessor>().InRequestScope();
         }
@@ -73,6 +75,11 @@ namespace BuenaHealth.Web.API.App_Start
             var userSession = new UserSession();
             container.Bind<IUserSession>().ToConstant(userSession).InSingletonScope();
             container.Bind<IWebUserSession>().ToConstant(userSession).InSingletonScope();
+        }
+
+        private void ConfigureAutoMapper(IKernel container)
+        {
+            container.Bind<IAutoMapper>().To<AutoMapperAdapter>().InSingletonScope();
         }
     }
 }
