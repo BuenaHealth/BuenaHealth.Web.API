@@ -53,11 +53,16 @@
     <Compile Include="Mapping\UserMap.cs" />
     <Compile Include="Mapping\VersionedClassMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryProcessors\AddProfileQueryProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BuenaHealth.Common\BuenaHealth.Common.csproj">
+      <Project>{0a3e2439-b4d5-4aef-9346-159c814247e9}</Project>
+      <Name>BuenaHealth.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BuenaHealth.Data\BuenaHealth.Data.csproj">
       <Project>{8cfc3bf7-ac8a-453d-987f-d0307433f756}</Project>
       <Name>BuenaHealth.Data</Name>
