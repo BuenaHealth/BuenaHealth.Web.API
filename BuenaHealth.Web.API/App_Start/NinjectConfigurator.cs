@@ -1,7 +1,9 @@
 ﻿using BuenaHealth.Common;
 using BuenaHealth.Common.Logging;
 using BuenaHealth.Common.Security;
+using BuenaHealth.Data.QueryProcessors;
 using BuenaHealth.Data.SqlServer.Mapping;
+using BuenaHealth.Data.SqlServer.QueryProcessors;
 using BuenaHealth.Web.Common;
 using BuenaHealth.Web.Common.Security;
 using FluentNHibernate.Cfg;
@@ -28,6 +30,7 @@ namespace BuenaHealth.Web.API.App_Start
             ConfigureUserSession(container);
             ConfigureNHibernate(container);
             container.Bind<IDateTime>().To<DateTimeAdapter>().InSingletonScope();
+            container.Bind<IAddProfileQueryProcessor>().To<AddProfileQueryProcessor>().InRequestScope();
         }
 
         private void ConfigureLog4Net(IKernel container)
