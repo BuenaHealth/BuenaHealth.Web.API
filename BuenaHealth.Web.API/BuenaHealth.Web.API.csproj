@@ -275,6 +275,9 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="AutoMappingConfiguration\NewProfileToProfileEntityAutoMapperTypeConfiguration.cs" />
+    <Compile Include="AutoMappingConfiguration\ProfileAssociatesResolver.cs" />
+    <Compile Include="AutoMappingConfiguration\ProfileEntityToProfileAutoMapperTypeConfigurator.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\V1\ProfilesController.cs" />
     <Compile Include="Controllers\V2\ProfilesController.cs" />
