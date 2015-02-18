@@ -5,6 +5,7 @@ using BuenaHealth.Common.TypeMapping;
 using BuenaHealth.Data.QueryProcessors;
 using BuenaHealth.Data.SqlServer.Mapping;
 using BuenaHealth.Data.SqlServer.QueryProcessors;
+using BuenaHealth.Web.API.AutoMappingConfiguration;
 using BuenaHealth.Web.Common;
 using BuenaHealth.Web.Common.Security;
 using FluentNHibernate.Cfg;
@@ -80,6 +81,24 @@ namespace BuenaHealth.Web.API.App_Start
         private void ConfigureAutoMapper(IKernel container)
         {
             container.Bind<IAutoMapper>().To<AutoMapperAdapter>().InSingletonScope();
+            container.Bind<IAutoMapperTypeConfigurator>()
+            .To<StatusEntityToStatusAutoMapperTypeConfigurator>()
+            .InSingletonScope();
+            container.Bind<IAutoMapperTypeConfigurator>()
+            .To<StatusToStatusEntityAutoMapperTypeConfigurator>()
+            .InSingletonScope();
+            container.Bind<IAutoMapperTypeConfigurator>()
+            .To<UserEntityToUserAutoMapperTypeConfigurator>()
+            .InSingletonScope();
+            container.Bind<IAutoMapperTypeConfigurator>()
+            .To<UserToUserEntityAutoMapperTypeConfigurator>()
+            .InSingletonScope();
+            container.Bind<IAutoMapperTypeConfigurator>()
+            .To<NewProfileToProfileEntityAutoMapperTypeConfiguration>()
+            .InSingletonScope();
+            container.Bind<IAutoMapperTypeConfigurator>()
+            .To<ProfileEntityToProfileAutoMapperTypeConfigurator>()
+            .InSingletonScope();
         }
     }
 }

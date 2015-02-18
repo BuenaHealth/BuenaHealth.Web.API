@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using BuenaHealth.Common.Logging;
+using BuenaHealth.Common.TypeMapping;
+using BuenaHealth.Web.API.App_Start;
 using BuenaHealth.Web.Common;
 
 namespace BuenaHealth.Web.API
@@ -17,6 +19,7 @@ namespace BuenaHealth.Web.API
         {
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            new AutoMapperConfigurator().Configure(WebContainerManager.GetAll<IAutoMapperTypeConfigurator>());
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
