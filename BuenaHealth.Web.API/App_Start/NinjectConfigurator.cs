@@ -6,6 +6,7 @@ using BuenaHealth.Data.QueryProcessors;
 using BuenaHealth.Data.SqlServer.Mapping;
 using BuenaHealth.Data.SqlServer.QueryProcessors;
 using BuenaHealth.Web.API.AutoMappingConfiguration;
+using BuenaHealth.Web.API.MaintenanceProcessing;
 using BuenaHealth.Web.Common;
 using BuenaHealth.Web.Common.Security;
 using FluentNHibernate.Cfg;
@@ -34,6 +35,7 @@ namespace BuenaHealth.Web.API.App_Start
             ConfigureAutoMapper(container);
             container.Bind<IDateTime>().To<DateTimeAdapter>().InSingletonScope();
             container.Bind<IAddProfileQueryProcessor>().To<AddProfileQueryProcessor>().InRequestScope();
+            container.Bind<IAddProfileMaintenanceProcessor>().To<AddProfileMaintenanceProcessor>().InRequestScope();
         }
 
         private void ConfigureLog4Net(IKernel container)
