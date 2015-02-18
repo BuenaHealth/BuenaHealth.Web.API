@@ -278,6 +278,8 @@
     <Compile Include="AutoMappingConfiguration\NewProfileToProfileEntityAutoMapperTypeConfiguration.cs" />
     <Compile Include="AutoMappingConfiguration\ProfileAssociatesResolver.cs" />
     <Compile Include="AutoMappingConfiguration\ProfileEntityToProfileAutoMapperTypeConfigurator.cs" />
+    <Compile Include="AutoMappingConfiguration\StatusEntityToStatusAutoMapperTypeConfigurator.cs" />
+    <Compile Include="AutoMappingConfiguration\StatusToStatusEntityAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserEntityToUserAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserToUserEntityAutoMapperTypeConfigurator.cs" />
     <Compile Include="Controllers\HomeController.cs" />
