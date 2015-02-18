@@ -16,7 +16,7 @@ namespace BuenaHealth.Web.API.App_Start
 
     public static class NinjectWebCommon 
     {
-        private static readonly Bootstrapper bootstrapper = new Bootstrapper();
+        private static readonly Bootstrapper Bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
@@ -27,7 +27,7 @@ namespace BuenaHealth.Web.API.App_Start
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
 
             IKernel container = null;
-            bootstrapper.Initialize(() =>
+            Bootstrapper.Initialize(() =>
             {
                 container = CreateKernel();
                 return container;
@@ -42,7 +42,7 @@ namespace BuenaHealth.Web.API.App_Start
         /// </summary>
         public static void Stop()
         {
-            bootstrapper.ShutDown();
+            Bootstrapper.ShutDown();
         }
         
         /// <summary>
