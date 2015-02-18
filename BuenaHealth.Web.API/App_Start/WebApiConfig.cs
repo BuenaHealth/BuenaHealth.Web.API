@@ -16,7 +16,7 @@ namespace BuenaHealth.Web.API
         {  
             // Web API configuration and services
             var contstraintResolver = new DefaultInlineConstraintResolver();
-            contstraintResolver.ConstraintMap.Add("apiVersionContraint", typeof(ApiVersionConstraint));
+            contstraintResolver.ConstraintMap.Add("apiVersionConstraint", typeof(ApiVersionConstraint));
 
 
             // Web API routes
