@@ -22,7 +22,9 @@ namespace BuenaHealth.Data.SqlServer.QueryProcessors
         {
             profile.CreatedDateTime = _datetime.UtcNow;
             profile.Status = _session.QueryOver<Status>().Where(x => x.Name == "Not Started").SingleOrDefault();
-            profile.CreatedBy = _session.QueryOver<User>().Where(x => x.UserName == _userSession.Username).SingleOrDefault();
+            //profile.CreatedBy = _session.QueryOver<User>().Where(x => x.UserName == _userSession.Username).SingleOrDefault();
+            //Hack Get it up and running
+            profile.CreatedBy = _session.Get<User>(1L);
 
             if (profile.Users != null && profile.Users.Any())
             {
