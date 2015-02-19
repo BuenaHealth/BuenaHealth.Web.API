@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using AutoMapper;
+﻿using AutoMapper;
 using BuenaHealth.Common.TypeMapping;
+using Profile = BuenaHealth.Data.Entities.Profile;
 
 namespace BuenaHealth.Web.API.AutoMappingConfiguration
 {
