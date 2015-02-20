@@ -19,12 +19,13 @@ namespace BuenaHealth.Web.API.Controllers.V1
         }
 
         [Route("",Name = "AddProfileRoute")]
-        [System.Web.Http.HttpPost]
-        public Profile AddProfile(HttpRequestMessage requestMessage, NewProfile newProfile)
+        [HttpPost]
+        public IHttpActionResult AddProfile(HttpRequestMessage requestMessage, NewProfile newProfile)
         {
             var profile = _addProfileMaintenanceProcessor.AddProfile(newProfile);
+            var result = new ProfileCreatedActionResult(requestMessage, profile);
 
-            return profile;
+            return result;
         }
     }
 }
