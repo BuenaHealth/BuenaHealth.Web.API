@@ -1,5 +1,6 @@
 ﻿using System.Net.Http;
 using System.Web.Http;
+using BuenaHealth.Common;
 using BuenaHealth.Web.API.MaintenanceProcessing;
 using BuenaHealth.Web.API.Models;
 using BuenaHealth.Web.Common;
@@ -20,6 +21,7 @@ namespace BuenaHealth.Web.API.Controllers.V1
 
         [Route("",Name = "AddProfileRoute")]
         [HttpPost]
+        [Authorize(Roles =  Constants.RoleNames.Manager)]
         public IHttpActionResult AddProfile(HttpRequestMessage requestMessage, NewProfile newProfile)
         {
             var profile = _addProfileMaintenanceProcessor.AddProfile(newProfile);
