@@ -283,6 +283,7 @@
     <Compile Include="AutoMappingConfiguration\StatusToStatusEntityAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserEntityToUserAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserToUserEntityAutoMapperTypeConfigurator.cs" />
+    <Compile Include="Security\BasicSecurityService.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\V1\ProfilesController.cs" />
     <Compile Include="Controllers\V2\ProfilesController.cs" />
@@ -290,6 +291,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Security\IBasicSecurityService.cs" />
     <Compile Include="MaintenanceProcessing\AddProfileMaintenanceProcessor.cs" />
     <Compile Include="MaintenanceProcessing\IAddProfileMaintenanceProcessor.cs" />
     <Compile Include="MaintenanceProcessing\LocationLinkCalculator.cs" />

@@ -1,9 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
+using System.Security.Principal;
+using System.Threading;
 using System.Web;
+using BuenaHealth.Common;
 using BuenaHealth.Common.Logging;
+using BuenaHealth.Data.Entities;
+using BuenaHealth.Web.Common;
 using log4net;
+using NHibernate;
 
 namespace BuenaHealth.Web.API.Security
 {
@@ -35,9 +42,46 @@ namespace BuenaHealth.Web.API.Security
 
             Thread.CurrentPrincipal = principal;
 
-            if(HTTPContext.Current != null)
+            if (HttpContext.Current != null)
+            {
+                HttpContext.Current.User = principal;
+            }
+            return true;
 
+        }
 
+        public virtual IPrincipal GetPrincipal(User user)
+        {
+            var identity = new GenericIdentity(user.UserName, Constants.SchemeTypes.Basic);
+            identity.AddClaim(new Claim(ClaimTypes.GivenName,user.FirstName));
+            identity.AddClaim(new Claim(ClaimTypes.Surname, user.LastName));
+
+            var username = user.UserName.ToLowerInvariant();
+            switch (username)
+            {
+                case "bhogg":
+                    identity.AddClaim(new Claim(ClaimTypes.Role, Constants.RoleNames.Manager));
+                    identity.AddClaim(new Claim(ClaimTypes.Role, Constants.RoleNames.SeniorWorker));
+                    identity.AddClaim(new Claim(ClaimTypes.Role, Constants.RoleNames.JuniorWorker));
+                    break;
+                case "jbob":
+                    identity.AddClaim(new Claim(ClaimTypes.Role, Constants.RoleNames.SeniorWorker));
+                    identity.AddClaim(new Claim(ClaimTypes.Role, Constants.RoleNames.JuniorWorker));
+                    break;
+                case "jdoe":
+                    identity.AddClaim(new Claim(ClaimTypes.Role, Constants.RoleNames.JuniorWorker));
+                    break;
+                default:
+                    return null;
+            }
+            return new ClaimsPrincipal(identity);
+        }
+
+        public virtual User GetUser(string username)
+        {
+            username = username.ToLowerInvariant();
+
+            return Session.QueryOver<User>().Where(x => x.UserName == username).SingleOrDefault();
         }
 
         public bool SetSecurityPrincipal(string username, string password)
