@@ -283,6 +283,7 @@
     <Compile Include="AutoMappingConfiguration\StatusToStatusEntityAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserEntityToUserAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserToUserEntityAutoMapperTypeConfigurator.cs" />
+    <Compile Include="Security\BasicAuthenticationMessageHandler.cs" />
     <Compile Include="Security\BasicSecurityService.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\V1\ProfilesController.cs" />
