@@ -84,9 +84,5 @@ namespace BuenaHealth.Web.API.Security
             return Session.QueryOver<User>().Where(x => x.UserName == username).SingleOrDefault();
         }
 
-        public bool SetSecurityPrincipal(string username, string password)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
