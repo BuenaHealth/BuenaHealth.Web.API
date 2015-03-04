@@ -6,6 +6,7 @@ using System.Web.Routing;
 using BuenaHealth.Common.Logging;
 using BuenaHealth.Common.TypeMapping;
 using BuenaHealth.Web.API.App_Start;
+using BuenaHealth.Web.API.Security;
 using BuenaHealth.Web.Common;
 
 namespace BuenaHealth.Web.API
@@ -16,10 +17,18 @@ namespace BuenaHealth.Web.API
         {
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            RegisterHandlers();
             new AutoMapperConfigurator().Configure(WebContainerManager.GetAll<IAutoMapperTypeConfigurator>());
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        private void RegisterHandlers()
+        {
+            var logManager = WebContainerManager.Get<ILogManager>();
+            GlobalConfiguration.Configuration.MessageHandlers.Add(
+                new BasicAuthenticationMessageHandler(logManager, WebContainerManager.Get<IBasicSecurityService>()));
         }
 
         protected void Application_Error()
