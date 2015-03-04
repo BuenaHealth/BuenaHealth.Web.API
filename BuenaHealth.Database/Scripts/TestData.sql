@@ -15,17 +15,17 @@ IF NOT EXISTS (select * from [User] where Username = 'jdoe')
 	INSERT into [dbo].[User] ([Firstname], [Lastname], [Username]) 
 		VALUES (N'John', N'Doe', N'jdoe')
 
-IF NOT EXISTS (select * from dbo.Task where Subject = 'Test Task')
+IF NOT EXISTS (select * from [dbo].[Profile] where Subject = 'Test Task')
 begin
 	select top 1 @statusId = StatusId from Status order by StatusId;
 	select top 1 @userId = UserId from [User] order by UserId;
 
-	insert into dbo.Task(Subject, StartDate, StatusId, CreatedDate, CreatedUserId)
+	insert into dbo.Profile(Subject, StartDate, StatusId, CreatedDate, CreatedUserId)
 		values('Test Task', getdate(), @statusId, getdate(), @userId);
 
-	set @taskId = SCOPE_IDENTITY();
+	set @profileId = SCOPE_IDENTITY();
 	
-	INSERT [dbo].[TaskUser] ([TaskId], [UserId]) 
-		VALUES (@taskId, @userId)
+	INSERT [dbo].[ProfileUser] ([ProfileId], [UserId]) 
+		VALUES (@profileId, @userId)
 end
 	
