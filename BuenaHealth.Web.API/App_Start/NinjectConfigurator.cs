@@ -38,6 +38,9 @@ namespace BuenaHealth.Web.API.App_Start
             container.Bind<IAddProfileQueryProcessor>().To<AddProfileQueryProcessor>().InRequestScope();
             container.Bind<IAddProfileMaintenanceProcessor>().To<AddProfileMaintenanceProcessor>().InRequestScope();
             container.Bind<IProfileByIdQueryProcessor>().To<ProfileByIdQueryProcessor>().InRequestScope();
+            container.Bind<IUpdateProfileStatusQueryProcessor>()
+                .To<UpdateProfileStatusQueryProcessor>()
+                .InRequestScope();
             container.Bind<IBasicSecurityService>().To<BasicSecurityService>().InSingletonScope();
         }
 
