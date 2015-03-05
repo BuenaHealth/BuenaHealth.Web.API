@@ -37,6 +37,7 @@ namespace BuenaHealth.Web.API.App_Start
             container.Bind<IDateTime>().To<DateTimeAdapter>().InSingletonScope();
             container.Bind<IAddProfileQueryProcessor>().To<AddProfileQueryProcessor>().InRequestScope();
             container.Bind<IAddProfileMaintenanceProcessor>().To<AddProfileMaintenanceProcessor>().InRequestScope();
+            container.Bind<IProfileByIdQueryProcessor>().To<ProfileByIdQueryProcessor>().InRequestScope();
             container.Bind<IBasicSecurityService>().To<BasicSecurityService>().InSingletonScope();
         }
 
