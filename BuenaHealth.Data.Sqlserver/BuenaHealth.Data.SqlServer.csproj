@@ -55,6 +55,8 @@
     <Compile Include="Mapping\VersionedClassMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryProcessors\AddProfileQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\IProfileByIdQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\ProfileByIdQueryProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
