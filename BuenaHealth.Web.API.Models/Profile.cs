@@ -11,6 +11,7 @@ namespace BuenaHealth.Web.API.Models
         public string Name { get; set; }
         public Status Status { get; set; }
         public DateTime CreatedDateTime { get; set; }
+        public DateTime StartDate { get; set; }
         public List<User> Associates { get; set; }
 
         public List<Link> Links
