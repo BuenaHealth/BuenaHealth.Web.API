@@ -297,6 +297,7 @@
     <Compile Include="AutoMappingConfiguration\StatusToStatusEntityAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserEntityToUserAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserToUserEntityAutoMapperTypeConfigurator.cs" />
+    <Compile Include="Controllers\V1\ProfileWorkflowController.cs" />
     <Compile Include="MaintenanceProcessing\IStartProfileWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\StartProfileWorkflowProcessor.cs" />
     <Compile Include="Security\BasicAuthenticationMessageHandler.cs" />
