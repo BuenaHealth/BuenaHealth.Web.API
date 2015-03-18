@@ -11,5 +11,5 @@
 	FOREIGN KEY ([LanguageId]) REFERENCES [dbo].[Language] ([LanguageId]),
 	FOREIGN KEY ([RaceId]) REFERENCES [dbo].[Race] ([RaceId]),
 	FOREIGN KEY ([EthnicityId]) REFERENCES [dbo].[Ethnicity] ([EthnicityId]),
-	FOREIGN KEY ([UserId]) REFERENCES [dbo].[User] ([UserId]))
+	FOREIGN KEY ([UserId]) REFERENCES [dbo].[User] ([UserId])
 );
