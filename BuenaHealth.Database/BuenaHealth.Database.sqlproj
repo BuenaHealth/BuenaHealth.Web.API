@@ -58,16 +58,15 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Scripts" />
-    <Folder Include="Tables" />
-    <Folder Include="Scripts\PostDeployment" />
     <Folder Include="Scripts\PreDeployment" />
-    <Folder Include="Scripts\Update" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\Views" />
     <Folder Include="dbo\Functions" />
     <Folder Include="dbo\Synonyms" />
     <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="Scripts\PostDeployment" />
+    <Folder Include="Scripts\Update" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\ReferenceData.sql" />
