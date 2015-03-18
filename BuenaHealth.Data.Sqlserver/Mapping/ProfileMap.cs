@@ -12,6 +12,7 @@ namespace BuenaHealth.Data.SqlServer.Mapping
             Map(x => x.CreatedDateTime).Not.Nullable();
             References(x => x.Status, "StatusId");
             References(x => x.CreatedBy, "CreatedUserId");
+            References(x => x.StartDate, "StartDateId");
             HasManyToMany(x => x.Users)
                 .Access.ReadOnlyPropertyThroughCamelCaseField(Prefix.Underscore)
                 .Table("ProfileUser")
