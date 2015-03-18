@@ -62,22 +62,30 @@
     <Folder Include="Scripts\PostDeployment" />
     <Folder Include="Scripts\PreDeployment" />
     <Folder Include="Scripts\Update" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Views" />
+    <Folder Include="dbo\Functions" />
+    <Folder Include="dbo\Synonyms" />
+    <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\ReferenceData.sql" />
     <None Include="Scripts\TestData.sql" />
-    <Build Include="Tables\Status.sql" />
-    <Build Include="Tables\Profile.sql" />
-    <Build Include="Tables\ProfileUser.sql" />
-    <Build Include="Tables\User.sql" />
-    <Build Include="Tables\Demographic.sql" />
-    <Build Include="Tables\Language.sql" />
-    <Build Include="Tables\Ethnicity.sql" />
-    <Build Include="Tables\Race.sql" />
-    <Build Include="Tables\Sex.sql" />
     <None Include="BuenaHealth.Database.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Demographic.sql" />
+    <Build Include="dbo\Tables\Ethnicity.sql" />
+    <Build Include="dbo\Tables\Language.sql" />
+    <Build Include="dbo\Tables\Profile.sql" />
+    <Build Include="dbo\Tables\ProfileUser.sql" />
+    <Build Include="dbo\Tables\Race.sql" />
+    <Build Include="dbo\Tables\Sex.sql" />
+    <Build Include="dbo\Tables\Status.sql" />
+    <Build Include="dbo\Tables\User.sql" />
   </ItemGroup>
 </Project>
