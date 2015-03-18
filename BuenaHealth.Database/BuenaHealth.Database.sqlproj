@@ -59,6 +59,9 @@
     <Folder Include="Properties" />
     <Folder Include="Scripts" />
     <Folder Include="Tables" />
+    <Folder Include="Scripts\PostDeployment" />
+    <Folder Include="Scripts\PreDeployment" />
+    <Folder Include="Scripts\Update" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\ReferenceData.sql" />
