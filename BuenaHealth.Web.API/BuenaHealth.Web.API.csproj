@@ -35,16 +35,6 @@
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <PublishDatabaseSettings>
       <Objects>
-        <ObjectGroup Name="BuenaHealthDb-Deployment" Order="1">
-          <Destination Path="Data Source=.%3bInitial Catalog=BuenaHealth%3bIntegrated Security=True%3bApplication Name=BuenaHealthWebApi" />
-          <Object Type="DbFullSql">
-            <PreSource Path="Data Source=.%3bInitial Catalog=BuenaHealth%3bIntegrated Security=True%3bApplication Name=BuenaHealthWebApi" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\BuenaHealthDb-Deployment_SchemaAndData.sql" Transacted="True" />
-          </Object>
-          <Object Type="DbFullSql">
-            <Source Path="..\BuenaHealth.Database\Scripts\Script.PostDeployment.sql" Transacted="False" />
-          </Object>
-        </ObjectGroup>
       </Objects>
     </PublishDatabaseSettings>
   </PropertyGroup>
