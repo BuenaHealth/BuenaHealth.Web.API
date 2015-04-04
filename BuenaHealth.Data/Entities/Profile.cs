@@ -13,6 +13,7 @@ namespace BuenaHealth.Data.Entities
         public virtual DateTime StartDate { get; set; }
         public virtual DateTime CreatedDateTime { get; set; }
         public virtual User CreatedBy { get; set; }
+        public virtual DateTime CompletedDate { get; set; }
 
         public virtual IList<User> Users
         {

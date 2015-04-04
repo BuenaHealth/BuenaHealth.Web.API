@@ -13,6 +13,7 @@ namespace BuenaHealth.Web.API.Models
         public DateTime CreatedDateTime { get; set; }
         public DateTime StartDate { get; set; }
         public List<User> Associates { get; set; }
+        public DateTime CompletedDate { get; set; }
 
         public List<Link> Links
         {
