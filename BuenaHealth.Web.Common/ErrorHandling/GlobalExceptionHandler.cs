@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Web;
 using System.Web.Http.ExceptionHandling;
+using BuenaHealth.Common;
 using BuenaHealth.Data.Exceptions;
 
 namespace BuenaHealth.Web.Common.ErrorHandling
@@ -29,6 +30,13 @@ namespace BuenaHealth.Web.Common.ErrorHandling
                 exception.Message);
                 return;
             }
+            if (exception is BusinessRuleViolationException)
+            {
+                context.Result = new SimpleErrorResult(context.Request, HttpStatusCode.PaymentRequired, 
+                    exception.Message);
+                return;
+            }
+
             context.Result = new SimpleErrorResult(context.Request, HttpStatusCode.InternalServerError,
             exception.Message);
         }
