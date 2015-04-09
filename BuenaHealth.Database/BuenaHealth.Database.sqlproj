@@ -69,8 +69,6 @@
     <Folder Include="Scripts\Update" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\ReferenceData.sql" />
-    <None Include="Scripts\TestData.sql" />
     <None Include="BuenaHealth.Database.publish.xml" />
     <None Include="Scripts\PostDeployment\PopulateStatus.sql" />
     <None Include="Scripts\PostDeployment\PopulateUser.sql" />
@@ -81,9 +79,6 @@
     <None Include="Scripts\PostDeployment\PopulateProfile.sql" />
     <None Include="Scripts\PostDeployment\PopulateProfileUser.sql" />
     <None Include="Scripts\PostDeployment\PopulateLanguage.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Demographic.sql" />
