@@ -16,7 +16,8 @@ namespace BuenaHealth.Web.API.AutoMappingConfiguration
                 .ForMember(opt => opt.StartDate, x => x.Ignore())
                 .ForMember(opt => opt.ProfileId, x => x.Ignore())
                 .ForMember(opt => opt.Status, x => x.Ignore())
-                .ForMember(opt => opt.Users, x => x.Ignore());
+                .ForMember(opt => opt.Users, x => x.Ignore())
+                .ForMember(opt => opt.CompletedDate, x => x.Ignore());
         }
     }
 }
