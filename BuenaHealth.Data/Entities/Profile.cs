@@ -10,10 +10,10 @@ namespace BuenaHealth.Data.Entities
         public virtual long ProfileId { get; set; }
         public virtual string Name { get; set; }
         public virtual Status Status { get; set; }
-        public virtual DateTime StartDate { get; set; }
-        public virtual DateTime CreatedDateTime { get; set; }
+        public virtual DateTime? StartDate { get; set; }
+        public virtual DateTime? CreatedDateTime { get; set; }
         public virtual User CreatedBy { get; set; }
-        public virtual DateTime CompletedDate { get; set; }
+        public virtual DateTime? CompletedDate { get; set; }
 
         public virtual IList<User> Users
         {

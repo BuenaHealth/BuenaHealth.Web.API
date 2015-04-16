@@ -44,6 +44,9 @@ namespace BuenaHealth.Web.API.App_Start
             container.Bind<IStartProfileWorkflowProcessor>()
                 .To<StartProfileWorkflowProcessor>()
                 .InRequestScope();
+            container.Bind<IReactivateProfileWorkflowProcessor>()
+                .To<ReactivateProfileWorkflowProcessor>()
+                .InRequestScope();
             container.Bind<IBasicSecurityService>().To<BasicSecurityService>().InSingletonScope();
         }
 

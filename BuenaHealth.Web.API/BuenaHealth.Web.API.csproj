@@ -290,7 +290,9 @@
     <Compile Include="Controllers\V1\ProfileWorkflowController.cs" />
     <Compile Include="MaintenanceProcessing\CompleteProfileWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\ICompleteProfileWorkflowProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\IReactivateProfileWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\IStartProfileWorkflowProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\ReactivateProfileWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\StartProfileWorkflowProcessor.cs" />
     <Compile Include="Security\BasicAuthenticationMessageHandler.cs" />
     <Compile Include="Security\BasicSecurityService.cs" />
