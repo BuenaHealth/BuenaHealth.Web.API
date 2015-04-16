@@ -288,6 +288,8 @@
     <Compile Include="AutoMappingConfiguration\UserEntityToUserAutoMapperTypeConfigurator.cs" />
     <Compile Include="AutoMappingConfiguration\UserToUserEntityAutoMapperTypeConfigurator.cs" />
     <Compile Include="Controllers\V1\ProfileWorkflowController.cs" />
+    <Compile Include="InquiryProcessing\IProfileIdInquiryProcessor.cs" />
+    <Compile Include="InquiryProcessing\ProfileIdInquiryProcessor.cs" />
     <Compile Include="MaintenanceProcessing\CompleteProfileWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\ICompleteProfileWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\IReactivateProfileWorkflowProcessor.cs" />

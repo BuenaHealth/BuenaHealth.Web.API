@@ -7,6 +7,7 @@ using BuenaHealth.Data.SqlServer.Mapping;
 using BuenaHealth.Data.SqlServer.QueryProcessors;
 using BuenaHealth.Web.API.AutoMappingConfiguration;
 using BuenaHealth.Web.API.MaintenanceProcessing;
+using BuenaHealth.Web.API.InquiryProcessing;
 using BuenaHealth.Web.API.Security;
 using BuenaHealth.Web.Common;
 using BuenaHealth.Web.Common.Security;
@@ -46,6 +47,9 @@ namespace BuenaHealth.Web.API.App_Start
                 .InRequestScope();
             container.Bind<IReactivateProfileWorkflowProcessor>()
                 .To<ReactivateProfileWorkflowProcessor>()
+                .InRequestScope();
+            container.Bind<IProfileByIdInquiryProcessor>()
+                .To<IProfileByIdInquiryProcessor>()
                 .InRequestScope();
             container.Bind<IBasicSecurityService>().To<BasicSecurityService>().InSingletonScope();
         }
