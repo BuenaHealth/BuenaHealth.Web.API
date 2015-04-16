@@ -1,14 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
-using BuenaHealth.Data.Entities;
-using BuenaHealth.Common;
+﻿using BuenaHealth.Common;
 using BuenaHealth.Common.Security;
 using BuenaHealth.Data.Entities;
 using BuenaHealth.Data.Exceptions;
 using BuenaHealth.Data.QueryProcessors;
 using NHibernate;
 using NHibernate.Util;
-
 
 namespace BuenaHealth.Data.SqlServer.QueryProcessors
 {

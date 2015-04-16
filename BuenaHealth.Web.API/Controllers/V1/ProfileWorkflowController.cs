@@ -8,6 +8,7 @@ using BuenaHealth.Web.API.MaintenanceProcessing;
 using BuenaHealth.Web.API.Models;
 using BuenaHealth.Web.Common;
 using BuenaHealth.Web.Common.Routing;
+using BuenaHealth.Web.Common.Security;
 
 namespace BuenaHealth.Web.API.Controllers.V1
 {
@@ -45,6 +46,7 @@ namespace BuenaHealth.Web.API.Controllers.V1
         }
 
         [HttpPost]
+        [UserAudit]
         [Route("profiles/{profileId:long}/reactivations", Name = "ReactivateProfileRoute")]
         public Profile ReactivateProfile(long profileId)
         {
