@@ -6,6 +6,7 @@ namespace BuenaHealth.Web.API.Models
     public class Profile : ILinkContaining
     {
         private List<Link> _links;
+        private bool _shouldSerializeAssociates;
 
         public long? ProfileId { get; set; }
         public string Name { get; set; }
@@ -24,6 +25,16 @@ namespace BuenaHealth.Web.API.Models
         public void AddLink(Link link)
         {
             Links.Add(link);
+        }
+
+        public void SetShouldSerializeAssociates(bool shouldSerializeAssociates)
+        {
+            _shouldSerializeAssociates = shouldSerializeAssociates;
+        }
+
+        public bool ShouldSerializeAssocaites()
+        {
+            return _shouldSerializeAssociates;
         }
     }
 }

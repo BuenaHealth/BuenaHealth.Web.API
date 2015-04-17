@@ -312,6 +312,7 @@
     <Compile Include="MaintenanceProcessing\ProfileCreatedActionResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Security\ProfileDataSecurityMessageHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

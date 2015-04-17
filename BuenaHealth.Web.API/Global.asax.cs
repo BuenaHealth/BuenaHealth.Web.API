@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using BuenaHealth.Common.Logging;
+using BuenaHealth.Common.Security;
 using BuenaHealth.Common.TypeMapping;
 using BuenaHealth.Web.API.App_Start;
 using BuenaHealth.Web.API.Security;
@@ -27,8 +28,15 @@ namespace BuenaHealth.Web.API
         private void RegisterHandlers()
         {
             var logManager = WebContainerManager.Get<ILogManager>();
+            var userSession = WebContainerManager.Get<IUserSession>();
+
             GlobalConfiguration.Configuration.MessageHandlers.Add(
                 new BasicAuthenticationMessageHandler(logManager, WebContainerManager.Get<IBasicSecurityService>()));
+
+            GlobalConfiguration.Configuration.MessageHandlers.Add(
+                new ProfileDataSecurityMessageHandler(logManager, userSession));
+
+            
         }
 
         protected void Application_Error()
