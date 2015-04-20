@@ -9,6 +9,7 @@ using BuenaHealth.Common.TypeMapping;
 using BuenaHealth.Web.API.App_Start;
 using BuenaHealth.Web.API.Security;
 using BuenaHealth.Web.Common;
+using JwtAuthForWebAPI;
 
 namespace BuenaHealth.Web.API
 {
@@ -36,6 +37,15 @@ namespace BuenaHealth.Web.API
             GlobalConfiguration.Configuration.MessageHandlers.Add(
                 new ProfileDataSecurityMessageHandler(logManager, userSession));
 
+            var builder = new SecurityTokenBuilder();
+            var reader = new ConfigurationReader();
+            GlobalConfiguration.Configuration.MessageHandlers.Add(
+            new JwtAuthenticationMessageHandler
+            {
+                AllowedAudience = reader.AllowedAudience,
+                Issuer = reader.Issuer,
+                SigningToken = builder.CreateFromKey(reader.SymmetricKey)
+            });
             
         }
 
